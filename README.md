@@ -67,9 +67,11 @@ C = \max_{p_X} I\left(X;Y\right).
  \qquad(2)$$</span>
 
 In case of AWGN, this leads to the well-known expression for the
-capacity <span id="eq-it_capacity_awgn_sigmax_sigman">$$
+capacity 
+<span id="eq-it_capacity_awgn_sigmax_sigman">$$
 C = \frac{1}{2}\log_2\left(1 + \frac{\sigma_x^2}{\sigma_n^2}\right).
- \qquad(3)$$</span> where $\sigma_x^2$ is the mean power of the signal
+ \qquad(3)$$</span> 
+where $\sigma_x^2$ is the mean power of the signal
 and $\sigma_n^2$ is the noise variance, or, equivalently
 <span id="eq-it_capacity_awgn_real_channel_bit_per_symbol">$$
 C = \frac{1}{2}\log_2\left(1 +\mathrm{SNR}\right).
