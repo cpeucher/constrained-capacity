@@ -22,7 +22,7 @@ class="quarto-xref">Figure 2</a> for 2-dimensional (2D) constellations.
 <div id="fig-constellation_constrained_capacity_1d">
 
 <img src="./docs/fig_constellation_constrained_capacity_1d_w4h3.jpg"
-style="width:20.0%" />
+style="width:60.0%" />
 
 
 Figure 1: Constellation-constrained capacity for selected 1D
@@ -138,7 +138,7 @@ I\left(X;Y\right) = \frac{1}{M} \sum_{x\in\mathcal{X}} \int_{-\infty}^{+\infty} 
  \qquad(9)$$</span>
 
 Here we have assumed that the symbols are transmitted with the same
-probability, i.e. $p\left(x\right) = 1/M$. This corresponds to the use
+probability, i.e. $p\left(x\right) = 1/M$ . This corresponds to the use
 of uniform constellations, as opposed to probabilistic shaping.
 
 In the case of the AWGN channel, the transition probabilities are known
