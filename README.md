@@ -56,17 +56,17 @@ schematically represented in
 <a href="#fig-awgn_model_for_capacity" class="quarto-xref">Figure 3</a>.
 Here, the information source is represented by the random variable $X$
 
-
-$$
-Y = X + N.\qquad(1)$$
-
+<span id="eq-it_additive_noise_model_receiver_source">$$
+Y = X + N.
+ \qquad(1)$$</span>
 
 For a discrete memoryless channel, the capacity can be calculated by
 maximising the mutual information over all possible input distributions
-$p_X\left(x\right)$, 
-$$
+$p_X\left(x\right)$,
+
+<span id="eq-it_def_capacity_max_mi">$$
 C = \max_{p_X} I\left(X;Y\right).
- \qquad(2)$$
+ \qquad(2)$$</span>
 
 In case of AWGN, this leads to the well-known expression for the
 capacity <span id="eq-it_capacity_awgn_sigmax_sigman">$$
