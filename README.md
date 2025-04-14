@@ -69,10 +69,15 @@ C = \max_{p_X} I\left(X;Y\right).
  \qquad(2)$$</span>
 
 In case of AWGN, this leads to the well-known expression for the
-capacity <span id="eq-it_capacity_awgn_sigmax_sigman">$$
+capacity
+
+<span id="eq-it_capacity_awgn_sigmax_sigman">$$
 C = \frac{1}{2}\log_2\left(1 + \frac{\sigma_x^2}{\sigma_n^2}\right).
- \qquad(3)$$</span> where $\sigma_x^2$ is the mean power of the signal
-and $\sigma_n^2$ is the noise variance, or, equivalently
+ \qquad(3)$$</span>
+
+where $\sigma_x^2$ is the mean power of the signal and $\sigma_n^2$ is
+the noise variance, or, equivalently
+
 <span id="eq-it_capacity_awgn_real_channel_bit_per_symbol">$$
 C = \frac{1}{2}\log_2\left(1 +\mathrm{SNR}\right).
  \qquad(4)$$</span> where $\mathrm{SNR}$ is the signal-to-noise ratio.
@@ -89,6 +94,7 @@ practical constraints on the achievable throughput over the AWGN
 channel.
 
 This throughput, or “constrained-capacity”, is then
+
 <span id="eq-it_capacity_constellation_constrained_def">$$
 C^* = I\left(X;Y\right)
  \qquad(5)$$</span>  
@@ -98,6 +104,7 @@ We now have a system according to
 <a href="#fig-awgn_model_for_capacity" class="quarto-xref">Figure 3</a>
 where the source $X$ is discrete and the source $Y$ is continuous. In
 this case, the mutual information can be expressed according to
+
 <span id="eq-it_mutual_information_discrete_input_continuous_output">$$
 I\left(X;Y\right) = \sum_{x\in\mathcal{X}} \int_{-\infty}^{+\infty} p\left(x,y\right) \log_2\left(\frac{p\left(x,y\right)}{p\left(x\right) p\left(y\right)}\right)\mathop{}\!\mathrm{d}y.
  \qquad(6)$$</span> where $p\left(x\right)$ is the probability mass
@@ -105,35 +112,55 @@ function of the random variable $X$, $p\left(y\right)$ the probability
 density function of the random variable $Y$ and $p\left(x,y\right)$ is
 joint probability density function of $X$ and $Y$.
 
-Exploiting <span id="eq-it_cc_total_prob">$$
+Exploiting
+
+<span id="eq-it_cc_total_prob">$$
   p\left(y\right) = \sum_{z\in\mathcal{X}} p\left(y|z\right) p\left(z\right),
- \qquad(7)$$</span> and <span id="eq-it_cc_joint">$$
+ \qquad(7)$$</span>
+
+and
+
+<span id="eq-it_cc_joint">$$
  p\left(x,y\right) = p\left(y|x\right) p\left(x\right),
- \qquad(8)$$</span> the mutual information can be expressed uniquely as
-a function of the transition probabilities $p\left(y|x\right)$ that
-describe the action of the channel <span id="eq-mi_transition">$$
+ \qquad(8)$$</span>
+
+the mutual information can be expressed uniquely as a function of the
+transition probabilities $p\left(y|x\right)$ that describe the action of
+the channel
+
+<span id="eq-mi_transition">$$
 I\left(X;Y\right) = \frac{1}{M} \sum_{x\in\mathcal{X}} \int_{-\infty}^{+\infty} p\left(y|x\right) \log_2 \frac{p\left(y|x\right)}{\frac{1}{M}\sum_{z \in \mathcal{X}} p\left(y|z\right)} \mathop{}\!\mathrm{d}y.
- \qquad(9)$$</span> Here we have assumed that the symbols are
-transmitted with the same probability, i.e. $p\left(x\right) = 1/M$.
-This corresponds to the use of uniform constellations, as opposed to
-probabilistic shaping.
+ \qquad(9)$$</span>
+
+Here we have assumed that the symbols are transmitted with the same
+probability, i.e. $p\left(x\right) = 1/M$. This corresponds to the use
+of uniform constellations, as opposed to probabilistic shaping.
 
 In the case of the AWGN channel, the transition probabilities are known
+
 <span id="eq-it_transition_probability_awgn_channel_1d_2d">$$
   p\left(y|x\right) =
   \begin{cases}
     \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{\left|y - x\right|^2}{2\sigma^2}}, & \mbox{constellations 1D } \\
     \frac{1}{2\pi\sigma^2} e^{-\frac{\left|y - x\right|^2}{2\sigma^2}}, & \mbox{constellations 2D},
   \end{cases}
- \qquad(10)$$</span> where $\sigma^2$ is the noise variance per
-quadrature (i.e. the total noise power is $\sigma^2$ for 1D
-constellations and $2\sigma^2$ for 2D constellations). The mutual
-information can then be expressed as <span id="eq-mi_intermediary">$$
+ \qquad(10)$$</span>
+
+where $\sigma^2$ is the noise variance per quadrature (i.e. the total
+noise power is $\sigma^2$ for 1D constellations and $2\sigma^2$ for 2D
+constellations). The mutual information can then be expressed as
+
+<span id="eq-mi_intermediary">$$
   I\left(X;Y\right) = \frac{1}{M}\sum_{k=1}^{M} \int_{-\infty}^{+\infty} p\left(y|x\right) \log_2\left[\frac{e^{-\frac{\left|n\right|^2}{2\sigma^2}}}{\frac{1}{M}\sum_{i=1}^{M}e^{-\frac{\left|x_k + n - x_i\right|^2}{2\sigma^2}}}\right] \mathop{}\!\mathrm{d}y,
- \qquad(11)$$</span> which can be cast under the form
+ \qquad(11)$$</span>
+
+which can be cast under the form
+
 <span id="eq-it_constellation_constrained_capacity_ungerboeck_form">$$
   I\left(X;Y\right) = \log_2 M - \frac{1}{M}\sum_{k=1}^{M} \mathbb{E}\left[\log_2\sum_{i=1}^{M} e^{-\frac{\left|x_k + n - x_i\right|^2 - \left|n\right|^2}{2\sigma^2}}\right],
- \qquad(12)$$</span> as presented in  \[1\].
+ \qquad(12)$$</span>
+
+as presented in  \[1\].
 
 The second term can be evaluated numerically through averaging over
 multiple realisations of the Gaussian random variable $n$, which is the
