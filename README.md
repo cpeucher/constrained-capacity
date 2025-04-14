@@ -80,7 +80,9 @@ the noise variance, or, equivalently
 
 <span id="eq-it_capacity_awgn_real_channel_bit_per_symbol">$$
 C = \frac{1}{2}\log_2\left(1 +\mathrm{SNR}\right).
- \qquad(4)$$</span> where $\mathrm{SNR}$ is the signal-to-noise ratio.
+ \qquad(4)$$</span>
+
+where $\mathrm{SNR}$ is the signal-to-noise ratio.
 
 We also know from the maximisation of the mutual information in the
 derivation of
@@ -97,7 +99,8 @@ This throughput, or “constrained-capacity”, is then
 
 <span id="eq-it_capacity_constellation_constrained_def">$$
 C^* = I\left(X;Y\right)
- \qquad(5)$$</span>  
+ \qquad(5)$$</span>
+
 for the chosen discrete input distribution.
 
 We now have a system according to
@@ -107,10 +110,12 @@ this case, the mutual information can be expressed according to
 
 <span id="eq-it_mutual_information_discrete_input_continuous_output">$$
 I\left(X;Y\right) = \sum_{x\in\mathcal{X}} \int_{-\infty}^{+\infty} p\left(x,y\right) \log_2\left(\frac{p\left(x,y\right)}{p\left(x\right) p\left(y\right)}\right)\mathop{}\!\mathrm{d}y.
- \qquad(6)$$</span> where $p\left(x\right)$ is the probability mass
-function of the random variable $X$, $p\left(y\right)$ the probability
-density function of the random variable $Y$ and $p\left(x,y\right)$ is
-joint probability density function of $X$ and $Y$.
+ \qquad(6)$$</span>
+
+where $p\left(x\right)$ is the probability mass function of the random
+variable $X$, $p\left(y\right)$ the probability density function of the
+random variable $Y$ and $p\left(x,y\right)$ is joint probability density
+function of $X$ and $Y$.
 
 Exploiting
 
@@ -217,7 +222,16 @@ cstar = calc_constellation_constrained_capacity(constellation,snr,2,10000);
 cstar = calc_constellation_constrained_capacity(constellation,snr,2,10000);
 ```
 
-See the scripts
+See the example scripts:
+
+- [plot_constellation_constrained_capacity_1d.m](./examples/plot_constellation_constrained_capacity_1d.m)
+- [plot_constellation_constrained_capacity_2d.m](./examples/plot_constellation_constrained_capacity_2d.m)
+
+Note:
+
+The scripts use the
+[linspecer](https://www.mathworks.com/matlabcentral/fileexchange/42673-beautiful-and-distinguishable-line-colors-colormap)
+function to generate distinguishable line colours.
 
 ## References
 
