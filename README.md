@@ -138,8 +138,8 @@ I\left(X;Y\right) = \frac{1}{M} \sum_{x\in\mathcal{X}} \int_{-\infty}^{+\infty} 
  \qquad(9)$$</span>
 
 Here we have assumed that the symbols are transmitted with the same
-probability, i.e. $p\left(x\right) = 1/M$ . This corresponds to the use
-of uniform constellations, as opposed to probabilistic shaping.
+probability, $p\left(x\right) = 1/M$. This corresponds to the use of
+uniform constellations, as opposed to probabilistic shaping.
 
 In the case of the AWGN channel, the transition probabilities are known
 
