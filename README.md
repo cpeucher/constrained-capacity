@@ -22,7 +22,7 @@ class="quarto-xref">Figure 2</a> for 2-dimensional (2D) constellations.
 <div id="fig-constellation_constrained_capacity_1d">
 
 <img src="./docs/fig_constellation_constrained_capacity_1d_w4h3.jpg"
-style="width:60.0%" />
+style="width:20.0%" />
 
 
 Figure 1: Constellation-constrained capacity for selected 1D
@@ -114,8 +114,8 @@ I\left(X;Y\right) = \sum_{x\in\mathcal{X}} \int_{-\infty}^{+\infty} p\left(x,y\r
 
 where $p\left(x\right)$ is the probability mass function of the random
 variable $X$, $p\left(y\right)$ the probability density function of the
-random variable $Y$ and $p\left(x,y\right)$ is joint probability density
-function of $X$ and $Y$.
+random variable $Y$ and $p\left(x,y\right)$ is the joint probability
+density function of $X$ and $Y$.
 
 Exploiting
 
@@ -146,8 +146,8 @@ In the case of the AWGN channel, the transition probabilities are known
 <span id="eq-it_transition_probability_awgn_channel_1d_2d">$$
   p\left(y|x\right) =
   \begin{cases}
-    \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{\left|y - x\right|^2}{2\sigma^2}}, & \mbox{constellations 1D } \\
-    \frac{1}{2\pi\sigma^2} e^{-\frac{\left|y - x\right|^2}{2\sigma^2}}, & \mbox{constellations 2D},
+    \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{\left|y - x\right|^2}{2\sigma^2}}, & \mbox{1D constellations} \\
+    \frac{1}{2\pi\sigma^2} e^{-\frac{\left|y - x\right|^2}{2\sigma^2}}, & \mbox{2D constellations},
   \end{cases}
  \qquad(10)$$</span>
 
