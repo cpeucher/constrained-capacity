@@ -69,7 +69,8 @@ C = \max_{p_X} I\left(X;Y\right).
  \qquad(2)$$</span>
 
 In case of AWGN, this leads to the well-known expression for the
-capacity
+capacity, which for one-dimensional signals (real-valued signal and
+noise) is expressed as
 
 <span id="eq-it_capacity_awgn_sigmax_sigman">$$
 C = \frac{1}{2}\log_2\left(1 + \frac{\sigma_x^2}{\sigma_n^2}\right).
